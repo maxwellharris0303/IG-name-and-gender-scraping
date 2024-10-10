@@ -1,4 +1,5 @@
 from curl_cffi import requests
+import pandas as pd
 # import requests
 import json
 
@@ -108,11 +109,26 @@ for username in username_list:
                 # Print the pretty JSON
                 # print(pretty_json)
                 print(user)
-                with open("results.txt", "a", encoding='utf-8') as file:
-                    file.write(user + "\n")
+
+                new_entry = pd.DataFrame({"username": [username], "name": [user]})
+    
+                # Append to the CSV file
+                try:
+                    # If file exists, append without writing the header again
+                    new_entry.to_csv("results.csv", mode='a', encoding='utf-8', header=False, index=False)
+                except FileNotFoundError:
+                    # If file doesn't exist, create it and write the header
+                    new_entry.to_csv("results.csv", mode='w', encoding='utf-8', header=True, index=False)
             else:
-                with open("results.txt", "a", encoding='utf-8') as file:
-                    file.write("invalid username" + "\n")
+                new_entry = pd.DataFrame({"username": [username], "name": ["invalid username"]})
+    
+                # Append to the CSV file
+                try:
+                    # If file exists, append without writing the header again
+                    new_entry.to_csv("results.csv", mode='a', encoding='utf-8', header=False, index=False)
+                except FileNotFoundError:
+                    # If file doesn't exist, create it and write the header
+                    new_entry.to_csv("results.csv", mode='w', encoding='utf-8', header=True, index=False)
             index += 1
             break
         except:
