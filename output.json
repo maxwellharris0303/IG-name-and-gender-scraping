@@ -1,0 +1,14 @@
+{
+    "sec-cp-challenge": "true",
+    "provider": "crypto",
+    "chlg_duration": 15,
+    "branding_type": "custom_branding",
+    "branding_cust_url": "https://disneyland.disney.go.com/prodksd/media/waiting-room-assets/processing_request.html",
+    "token": "AAQAAAAJ_____7qdSBI6TUl2anpEn2pYxx5iPwvbSAhoIIVmAx2mSqN8oc6iyehKXlkbo1Al0bcehOZWKVjxMyAn-bcrLNwLPdYnIApMGhLtSA7SmMba2Z_SJlSlyCarv2IV7dQnL4BfOtm07g3muRW3OzA3V61yfspjBiOUJwMpS9mXnzCT53NNE85M5nrTywrDN0zBTG73vA7ULBhgbLE_pyOSlDu5rULOFaGS7efzYrLurE-gbwpoaSYvyzaLWXYntNOU4utk6CfsxgGOssRaWnXziMV-csj8laOeSFVC4K6IDNwpSA8TZJ51t642zl25PbGlCVj3sYKHpcl6wUXyzHGTIuqK3Lu_",
+    "timestamp": 1721406229,
+    "nonce": "6248caf2b13312f671f4",
+    "difficulty": 7500,
+    "count": 1,
+    "timeout": 1000,
+    "cpu": false
+}
